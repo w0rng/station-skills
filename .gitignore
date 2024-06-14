@@ -1,3 +1,4 @@
 cady_data/
 caddy_config/
 .idea/
+.env
