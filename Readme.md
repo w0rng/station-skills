@@ -4,7 +4,8 @@
 
 1. add `.env` by `.env.example`
 2. run `docker-compose pull`
-3. run `docker-compose up -d`
+3. open ports in docker-compose
+4. run `docker-compose up -d`
 
 ### For CD
 
