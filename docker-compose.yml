@@ -13,11 +13,13 @@ services:
     image: kiri11mi1/debt:latest
     ports:
       - "8000:8000"
+    restart: always
 
-#  nebolive:
-#    image: kiri11mi1/nebolive:latest
-#    ports:
-#      - "8001:8080"
-#    command: uvicorn main:app --host 0.0.0.0 --port 8080 --reload
-#    env_file:
-#      - .env
+  nebolive:
+    image: kiri11mi1/nebolive:latest
+    ports:
+      - "8001:8080"
+    command: uvicorn main:app --host 0.0.0.0 --port 8080 --reload
+    env_file:
+      - .env
+    restart: always
