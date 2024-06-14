@@ -1,5 +1,5 @@
 debt.kiri11-mi1.ru {
-    reverse_proxy app:8001
+    reverse_proxy app:8000
 }
 
 nebo.kiri11-mi1.ru {
