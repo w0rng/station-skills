@@ -40,5 +40,6 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
             cd station-skills
-            docker-compose down
-            docker compose up -d --build
+            docker compose down
+            docker compose pull
+            docker compose up -d
