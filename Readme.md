@@ -6,9 +6,7 @@ Monorepository for Yandex station skills
 ### Launch in local server
 
 1. add `.env` by `.env.example`
-2. run `docker-compose pull`
-3. open ports in docker-compose
-4. run `docker-compose up -d`
+2. run `docker-compose up -d --build`
 
 ### For CI/CD
 
