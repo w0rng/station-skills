@@ -10,7 +10,7 @@ Monorepository for Yandex station skills
 3. open ports in docker-compose
 4. run `docker-compose up -d`
 
-### For CD
+### For CI/CD
 
 1. add `SSH_HOST`, `SSH_USER`, `SSH_PRIVATE_KEY`, `SSH_PASSPHRASE`, `NEBOLIVE_TOKEN`, `NEBOLIVE_CODE` in github secrets
 2. push on main or run github action
