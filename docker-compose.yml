@@ -9,16 +9,18 @@ services:
       - ./caddy_data:/data
       - ./caddy_config:/config
 
-  debt:
-    build:
-      dockerfile: debt/Dockerfile
-      context: .
     restart: always
 
   nebolive:
     build:
-      dockerfile: nebolive-gateway-api/Dockerfile
-      context: .
+      dockerfile: ./Dockerfile
+      context: ./nebolive-gateway-api
     env_file:
       - .env
+    restart: always
+
+  debt:
+    build:
+      dockerfile: ./Dockerfile
+      context: ./debt
     restart: always
