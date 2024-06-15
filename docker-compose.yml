@@ -10,11 +10,15 @@ services:
       - ./caddy_config:/config
 
   debt:
-    image: kiri11mi1/debt:latest
+    build:
+      dockerfile: debt/Dockerfile
+      context: .
     restart: always
 
   nebolive:
-    image: kiri11mi1/nebolive:latest
+    build:
+      dockerfile: nebolive-gateway-api/Dockerfile
+      context: .
     env_file:
       - .env
     restart: always
