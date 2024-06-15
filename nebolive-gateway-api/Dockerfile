@@ -5,8 +5,8 @@ RUN pip install -U pip setuptools wheel
 RUN pip install pdm
 
 # copy files
-COPY nebolive-gateway-api/pyproject.toml nebolive-gateway-api/pdm.lock nebolive-gateway-api/README.md /project/
-COPY nebolive-gateway-api/src/ /project/src
+COPY pyproject.toml pdm.lock README.md /project/
+COPY /src/ /project/src
 
 # install dependencies and project into the local packages directory
 WORKDIR /project
