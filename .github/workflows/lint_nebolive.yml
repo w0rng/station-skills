@@ -3,11 +3,9 @@ name: Nebo
 on:
   push:
     branches: [ '*' ]
-    paths: [ 'nebolive-gateway-api/**' ]
-  pull_request:
 
 jobs:
-  lint_nebo:
+  lint:
     runs-on: [ ubuntu-latest ]
     steps:
       - name: checkout
@@ -20,3 +18,12 @@ jobs:
         uses: jpetrucciani/ruff-check@main
         with:
           path: './nebolive-gateway-api/src'
+
+  build:
+    runs-on: [ ubuntu-latest ]
+    needs: [ lint ]
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+      - name: Build image
+        run: docker build -t $LOGIN/$NAME:${GITHUB_REF:11} -f Dockerfile nebolive-gateway-api
