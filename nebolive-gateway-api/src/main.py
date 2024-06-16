@@ -32,7 +32,7 @@ async def station(
 
 
 @app.post('/station/v2/', response_model=YandexStationResponse)
-async def station(
+async def station_v2(
     city_slug: str = Query(..., description='город'),
     lat: float = Query(..., description='широта'),
     lng: float = Query(..., description='долгота'),
