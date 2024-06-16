@@ -16,6 +16,6 @@ jobs:
         with:
           path: './debt/src'
       - uses: jpetrucciani/ruff-check@main
-        name: "check debt"
+        name: "check nebolive"
         with:
           path: './nebolive-gateway-api/src'

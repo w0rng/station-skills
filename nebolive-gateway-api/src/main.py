@@ -1,7 +1,6 @@
 from fastapi import Depends, FastAPI, Query
-from pydantic import BaseModel
-
 from nebolive_service import NeboliveService, get_nebolive_service
+from pydantic import BaseModel
 from report import generate_report
 from shortest_sensor import calculate_shortest_sensor
 
@@ -28,7 +27,7 @@ async def station(
         response=ResponseNestedSchema(
             text=generate_report(aqi=aqi),
             end_session=True,
-        )
+        ),
     )
 
 
@@ -47,5 +46,5 @@ async def station(
         response=ResponseNestedSchema(
             text=generate_report(aqi=aqi),
             end_session=True,
-        )
+        ),
     )
