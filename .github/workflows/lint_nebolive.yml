@@ -4,6 +4,7 @@ on:
   push:
     branches: [ '*' ]
     paths: [ 'nebolive-gateway-api/**' ]
+  pull_request:
 
 jobs:
   lint:

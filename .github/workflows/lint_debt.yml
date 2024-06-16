@@ -4,6 +4,7 @@ on:
   push:
     branches: [ '*' ]
     paths: [ 'debt/**' ]
+  pull_request:
 
 jobs:
   lint:
@@ -11,7 +12,12 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@master
-      - name: check debt
-        uses: actions/checkout@v1
+      - name: install go
+        uses: actions/setup-go@v5
         with:
-          basePath: './debt/src'
+          go-version: stable
+      - name: check debt
+        uses: golangci/golangci-lint-action@v6
+        with:
+          version: v1.58
+          working-directory: 'debt/src'
