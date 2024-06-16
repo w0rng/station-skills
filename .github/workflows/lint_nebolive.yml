@@ -15,9 +15,7 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.12
-      - name: Install ruff
-        run: pip install ruff
       - name: check nebolive
-        uses: ScDor/adopt-ruff@master
+        uses: jpetrucciani/ruff-check@main
         with:
           path: './nebolive-gateway-api/src'
