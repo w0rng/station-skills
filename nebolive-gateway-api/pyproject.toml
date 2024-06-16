@@ -3,7 +3,7 @@ name = "nebolive-gateway-api"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
-    {name = "kiri11-mi1", email = "kirill.mil.0310@mail.ru"},
+    { name = "kiri11-mi1", email = "kirill.mil.0310@mail.ru" },
 ]
 dependencies = [
     "fastapi>=0.109.0",
@@ -13,8 +13,7 @@ dependencies = [
 ]
 requires-python = "==3.11.*"
 readme = "README.md"
-license = {text = "MIT"}
-
+license = { text = "MIT" }
 
 [tool.pdm]
 distribution = false
