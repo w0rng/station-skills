@@ -1,4 +1,4 @@
-name: Lining
+name: Build
 
 on:
   push:
