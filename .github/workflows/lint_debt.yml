@@ -26,4 +26,4 @@ jobs:
       - name: checkout
         uses: actions/checkout@master
       - name: Build image
-        run: docker build -t debt -f Dockerfile ./debt/
+        run: docker build -t debt ./debt/

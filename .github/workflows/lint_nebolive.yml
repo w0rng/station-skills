@@ -26,4 +26,5 @@ jobs:
       - name: checkout
         uses: actions/checkout@master
       - name: Build image
-        run: docker build -t nebo -f Dockerfile ./nebolive-gateway-api/
+        run: docker build -t nebo ./nebolive-gateway-api/
+
