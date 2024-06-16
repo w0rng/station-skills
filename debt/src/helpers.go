@@ -20,7 +20,7 @@ type InputData struct {
 
 func calculate(input InputData) DebtInfo {
 	endDebt := input.beginDate.AddDate(input.Years, 0, 0)
-	hours := int(endDebt.Sub(time.Now()).Hours())
+	hours := int(time.Until(endDebt).Hours())
 	const (
 		hoursPerDay   = 24
 		hoursPerMonth = 24 * 30
