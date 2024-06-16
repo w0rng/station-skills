@@ -5,9 +5,8 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
-      - ./caddy_data:/data
-      - ./caddy_config:/config
+      - caddy_data:/data
+      - caddy_config:/config
     restart: always
 
   nebolive:
@@ -23,3 +22,7 @@ services:
       dockerfile: ./Dockerfile
       context: ./debt
     restart: always
+
+volumes:
+  caddy_data:
+  caddy_config:

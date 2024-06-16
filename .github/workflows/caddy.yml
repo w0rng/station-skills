@@ -1,0 +1,15 @@
+name: Caddy
+
+on:
+  push:
+    branches: [ '*' ]
+
+jobs:
+  build:
+    runs-on: [ ubuntu-latest ]
+    needs: [ lint ]
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+      - name: Build image
+        run: docker build -t caddy ./caddy/
