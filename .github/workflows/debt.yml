@@ -3,6 +3,7 @@ name: Debt
 on:
   push:
     branches: [ '*' ]
+  pull_request:
 
 jobs:
   lint:
