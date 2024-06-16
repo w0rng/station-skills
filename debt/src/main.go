@@ -33,6 +33,7 @@ func debtMessage(years, beginDate string) (string, error) {
 	return makeResponse(info), nil
 }
 
+
 func handleYandexStation(w http.ResponseWriter, r *http.Request) {
 	queryParams := r.URL.Query()
 	years := queryParams.Get("years")
