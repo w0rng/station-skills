@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  lint:
+  lint_nebo:
     runs-on: [ ubuntu-latest ]
     steps:
       - name: checkout

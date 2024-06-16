@@ -1,0 +1,16 @@
+name: Lining
+
+on:
+  push:
+    branches: [ 'main' ]
+    paths: [ 'nebolive-gateway-api/**' ]
+
+jobs:
+  build_nebo:
+    runs-on: [ ubuntu-latest ]
+    needs: [ lint_nebo ]
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+      - name: Build image
+        run: docker build -t $LOGIN/$NAME:${GITHUB_REF:11} -f Dockerfile .
