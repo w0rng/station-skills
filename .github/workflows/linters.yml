@@ -1,0 +1,21 @@
+name: Lining
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  lint:
+    runs-on: [ ubuntu-latest ]
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v1
+      - uses: jpetrucciani/ruff-check@main
+        name: "check debt"
+        with:
+          path: 'debt/src'
+      - uses: jpetrucciani/ruff-check@main
+        name: "check debt"
+        with:
+          path: 'nebolive-gateway-api/src'
