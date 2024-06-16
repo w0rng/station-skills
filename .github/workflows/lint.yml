@@ -3,7 +3,7 @@ name: Lining
 on:
   push:
     branches: [ '*' ]
-    paths: [ 'nebolive-gateway-api/**' ]
+    paths: [ 'debt/**' ]
 
 jobs:
   lint:
@@ -15,7 +15,12 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.12
+      - name: check debt
+        uses: jpetrucciani/ruff-check@main
+        with:
+          path: './debt/src'
       - name: check nebolive
         uses: jpetrucciani/ruff-check@main
         with:
           path: './nebolive-gateway-api/src'
+
