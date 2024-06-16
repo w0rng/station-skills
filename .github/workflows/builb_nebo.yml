@@ -3,7 +3,6 @@ name: Lining
 on:
   push:
     branches: [ 'main' ]
-    paths: [ 'nebolive-gateway-api/**' ]
 
 jobs:
   build_nebo:
