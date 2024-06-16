@@ -41,6 +41,7 @@ async def station_v2(
     sensors = nebolive.fetch_sensors(city_slug)
     sensor = calculate_shortest_sensor(sensors, lat, lng)
     aqi = sensor.instant.aqi if sensor is not None else nebolive.average_aqi(city_slug)
+    print()
 
     return YandexStationResponse(
         response=ResponseNestedSchema(
