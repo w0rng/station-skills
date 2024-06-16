@@ -15,7 +15,9 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.12
-      - name: check nebolive
+      - name: Install ruff
+        run: pip install ruff
+      - name: check debt
         uses: ScDor/adopt-ruff@master
         with:
           path: './debt/src'
